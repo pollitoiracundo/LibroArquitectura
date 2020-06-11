@@ -1,0 +1,75 @@
+% book example for classicthesis.sty
+\documentclass[
+  % Replace twoside with oneside if you are printing your thesis on a single side
+  % of the paper, or for viewing on screen.
+  %oneside,
+  twoside,
+  %openleft,
+  %titlepage,
+  11pt, letterpaper,
+  footinclude=true,
+  headinclude=true,
+  cleardoublepage=empty
+]{book}
+
+\usepackage{lipsum}
+%\usepackage[linedheaders,parts,pdfspacing]{classicthesis}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{acronym}
+\usepackage{cite} % para contraer referencias
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{bookmark}
+%\usepackage{pdfpages}
+\usepackage{float}
+\setlength{\parskip}{3mm}
+\usepackage{marginnote}
+
+
+
+\title{Una propuesta de arquitectura empresarial para valoración colectiva de empresas, productos y servicios usando la especificación Archimate 2.0. y Business Canvas Model}
+
+\author{Ing. Julian Olarte Ramos}
+
+\begin{document}
+
+\maketitle
+
+\graphicspath{{images/}}
+
+\include{FrontBackMatter/abstract}
+\include{FrontBackMatter/dedication}
+\include{FrontBackMatter/acknowledgements}
+\include{FrontBackMatter/contents}
+
+\part{Inicio}
+\include{capitulos/capitulo01/capitulo01}
+\include{capitulos/capitulo02/capitulo02}
+\include{capitulos/capitulo03/capitulo03}
+
+\part{Arquitectura}
+\include{capitulos/capitulo04/capitulo04}
+\include{capitulos/capitulo05/capitulo05}
+\include{capitulos/capitulo06/capitulo06}
+\include{capitulos/capitulo07/capitulo07}
+\include{capitulos/capitulo08/capitulo08}
+%capitulo adicional patrones
+\include{capitulos/capitulo11/capitulo11}
+
+\part{Cierre}
+
+\include{capitulos/capitulo09/capitulo09}
+\include{capitulos/capitulo10/capitulo10}
+
+%\include{capitulos/capitulo12/capitulo12}
+%\include{capitulos/capitulo13/capitulo13}
+%\include{capitulos/capitulo14/capitulo14}
+
+\bibliographystyle{acm}
+\bibliography{biblio}
+
+\end{document}

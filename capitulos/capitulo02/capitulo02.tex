@@ -1,0 +1,68 @@
+%*******************************************************
+% Capitulo dos
+%*******************************************************
+
+\chapter{Lenguaje usado}
+
+La descripción de los componentes de arquitectura empresarial y sus relaciones requieren un lenguaje de modelado que guíe de manera elocuente la exposición de todos los detalles del negocio.
+
+Éste documento usa la especificación de modelado arquitectónico ArchiMate 2.0. \cite{iacob2012archimate} para facilitar la exposición de la presente propuesta. El diseño del lenguaje ArchiMate inicia desde un conjunto de conceptos genéricos como entidad y relación y agrega a especificaciones anteriores, como UML, una gran variedad de conceptos específicos que derivan de procesos y aplicaciones de procesos para después aplicar conceptos específicos de dominio y arquitectura empresarial. 
+
+A continuación se expone brevemente los detalles más importantes del estándar de modelado.
+
+\section{Conceptos principales}
+
+Los tres elementos principales del lenguaje, que representan entidades del mundo real, son: Elementos estructurales activos, Elementos de comportamiento y Sujetos que expresan dicho comportamiento o en otras palabras objetos.
+
+\begin{itemize}
+    \item Un \textit{elemento estructural activo} es definido como una entidad capaz de ejecutar un comportamiento.
+    \item Un \textit{elemento de comportamiento} es una unidad ejecutada por uno o más elementos estructurales activos.
+    \item Los \textit{elementos estructurales pasivos} son objetos en los que un comportamiento es ejecutado.
+\end{itemize}
+
+Éstos tres aspectos son inspirados en frases con sujetos (estructuras activas), verbos (comportamientos) y objetos (estructuras pasivas).
+
+Por otro lado, se realiza una distinción entre la vista interna y externa de un sistema y estas se conectan. Bajo esta conexión se aclara también el termino de interfaz.
+
+\begin{itemize}
+    \item Un \textit{servicio} es una unidad de funcionalidad expone un sistema a su ambiente mientras oculta operaciones internas que entregan valor.
+\end{itemize}
+
+Dado que el servicio es el comportamiento visible externo de un sistema, existe un entorno en el que el sistema es usado a través del servicio. El servicio existe por una motivación que debe ser entendida como el valor del sistema o el servicio. Para los que usan de manera externa la combinación del servicio y su valor sólo no es relevante la información interna del sistema. Los servicios son accequibles a través de interfaces, las cuales son la vista externa de un elemento activo.
+
+\begin{itemize}
+    \item Una \textit{interfaz} es definida como un punto de acceso para uno o más servicios y esta disponible al entorno del sistema.
+\end{itemize}
+
+\section{Colaboración e interacción}
+
+En ArchiMate se puede distinguir entre un comportamiento realizado por un elemento estructural o un comportamiento colectivo (interacción) que es ejecutado por una colaboración de múltiples elementos estructurales.
+
+\begin{itemize}
+    \item Una \textit{colaboración} es definida como una agrupación de dos o más elementos estructurales que desarrollan un comportamiento colectivo.
+\end{itemize}
+
+El comportamiento colectivo puede ser modelado como una interacción.
+
+\begin{itemize}
+    \item Una \textit{interacción} es definida como una unidad de comportamiento ejecutada por una colaboración de dos o más elementos estructurales.
+\end{itemize}
+
+\section{Relaciones y capas}
+
+Para relacionar las entidades, ArchiMate cuenta con una serie de relaciones análogas a otros lenguajes gráficos de modelado como UML o BPMN.
+
+También cuenta con tres capas principales basadas en especializaciones de los conceptos básicos. 
+
+\begin{enumerate}
+
+\item La capa de negocio ofrece productos y servicios a clientes  externos, los cuales son realizados en la organización por procesos de negocio y actores del negocio.
+
+\item La capa de aplicación soporta el negocio con servicios de aplicación que son realizados por aplicaciones (software).
+
+\item La capa de tecnología (Infraestructura) ofrece servicios de infraestructura (por ejemplo: procesamiento, almacenamiento y servicios de comunicación) usados para ejecutar aplicaciones realizadas por computadores, hardware de comunicación y sistemas de software.
+
+\end{enumerate}
+
+
+
